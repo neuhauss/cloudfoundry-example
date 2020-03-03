@@ -1,8 +1,12 @@
+
 ---
 applications:
-- name: cfphptest
+- name: cfphp        
   memory: 128M
-  instances: 1
+  disk_quota: 512M
+  instances: 2
   path: .
   env:
-    SOME_VAR: Wheee
+  SOME_VAR: Wheeei
+  buildpack: php_buildpack
+  services: my-nfs2
